@@ -27,6 +27,9 @@
 
     <p v-if="show">This is just some test</p>
     <p v-else>This is another test</p>
+    <p v-show="show">Yet a third test</p>
+
+    <p>{{ persons[0].name }}</p>
   </div>
 </template>
 
@@ -40,7 +43,11 @@ export default {
       cssClass: '',
       clicked: false,
       counter: 0,
-      show: true
+      show: true,
+      persons: [
+        {name: 'Erich', age: 46},
+        {name: 'Priscilla', age: 36}
+      ]
     }
   },
   methods: {
